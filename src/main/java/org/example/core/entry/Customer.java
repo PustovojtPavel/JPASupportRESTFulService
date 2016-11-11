@@ -1,10 +1,23 @@
 package org.example.core.entry;
 
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
+
+import javax.persistence.*;
 import java.util.UUID;
 
+@Entity
+@Table(name = "customer", schema = "test")
 public class Customer {
 
+    @Id
+    @GenericGenerator(name = "uuid-gen", strategy = "uuid2")
+    @GeneratedValue(generator = "uuid-gen")
+    @Type(type="pg-uuid")
+    @Column(name="id")
     private UUID id;
+
+    @Column(name="name")
     private String name;
 
     public UUID getId() {
