@@ -15,6 +15,7 @@
     <jetty.version>9.2.10.v20150310</jetty.version>
     <spring.mvc>4.2.0.RELEASE</spring.mvc>
     <spring.data>1.10.1.RELEASE</spring.data>
+    <hb.manager>4.2.5.Final</hb.manager>
   </properties>
 
   <dependencies>
@@ -60,6 +61,13 @@
       <artifactId>spring-data-jpa</artifactId>
       <version>${spring.data}</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>${hb.manager}</version>
+    </dependency>
+
 
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
