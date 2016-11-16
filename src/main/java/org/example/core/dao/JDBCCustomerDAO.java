@@ -17,7 +17,7 @@ public class JDBCCustomerDAO implements CustomerDAO {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    private static final String SQL_GET_ALL_CUSTOMERS = "selet * from test.customer";
+    private static final String SQL_GET_ALL_CUSTOMERS = "select * from test.customer";
 
     public List<Customer> findAll() {
 
